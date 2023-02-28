@@ -51,11 +51,9 @@ export function dispatch() {
   console.log(`Dispatching new taxi for customer ${customer}`);
   let res = http.get(`http://localhost:8080/dispatch?customer=${customer}`);
   check(res, {"status is 200": (res) => res.status === 200});
+  check(res, {"driver is valid": (res) => internal.isDriverValid(res.json()["Driver"])});
   myTrend.add(res.timings.waiting);
   myCounter.add(1);
-
-  let driver = res.json()["Driver"]
-  console.log(`Driver ${driver} is valid: ${internal.isDriverValid(driver)}`)
   sleep(1);
 }
 
