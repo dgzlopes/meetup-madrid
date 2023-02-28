@@ -32,6 +32,7 @@ K6_BROWSER_ENABLED=true k6 run 08-browser.js
 
 Requirements:
 - Go
+- git
 - xk6
 
 ```
