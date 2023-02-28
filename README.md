@@ -26,3 +26,13 @@ k6 run --vus 1 --duration 1s 01.js
 k6 run 01.js
 K6_BROWSER_ENABLED=true k6 run 08-browser.js
 ```
+
+## Build extension
+
+Requirements:
+- Go
+- xk6
+
+```
+xk6 build --with xk6-internal=.
+```

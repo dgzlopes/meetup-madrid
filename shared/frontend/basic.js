@@ -1,4 +1,5 @@
 import { chromium } from 'k6/experimental/browser';
+import { check, sleep } from "k6";
 
 export async function LoadAndCheck(headless) {
   const browser = chromium.launch({ headless: headless });
