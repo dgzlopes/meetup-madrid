@@ -23,6 +23,7 @@ Requirements:
 
 ```
 k6 run --vus 1 --duration 1s 01.js
+echo $?
 k6 run 01.js
 K6_BROWSER_ENABLED=true k6 run 08-browser.js
 ```
